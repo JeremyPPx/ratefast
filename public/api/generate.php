@@ -119,6 +119,7 @@ $systemPrompt = "Du bist ein hilfreicher Assistent, der authentische und natürl
               . "Die Bewertung MUSS auf Deutsch verfasst sein.\n"
               . "Schreibe maximal 2 bis 3 Sätze.\n"
               . "Verfasse $sentimentStyle\n"
+              . "Verwende im generierten Text KEINE Gedankenstriche (wie - oder —).\n"
               . "Nutze die bereitgestellten Stichworte/Keywords des Nutzers und formuliere sie in flüssiges, natürliches Deutsch um.\n"
               . "Vermeide künstlich klingende Marketingsprache, Abkürzungen oder übertriebene Floskeln. Es muss so klingen, als hätte es ein echter Kunde geschrieben.";
 
