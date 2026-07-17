@@ -3,6 +3,33 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=UTF-8");
 
+// GET Debug Handler
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $envFile = dirname(__DIR__) . '/.env';
+    $exists = file_exists($envFile);
+    $apiKey = '';
+    if ($exists) {
+        $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            if (strpos($line, '=') !== false && strpos($line, '#') !== 0) {
+                list($key, $value) = explode('=', $line, 2);
+                if (trim($key) === 'OPENAI_API_KEY') {
+                    $apiKey = trim($value);
+                }
+            }
+        }
+    }
+    echo json_encode([
+        "status" => "debug",
+        "env_path" => $envFile,
+        "env_exists" => $exists,
+        "api_key_loaded" => !empty($apiKey),
+        "api_key_length" => strlen($apiKey),
+        "api_key_preview" => $apiKey ? substr($apiKey, 0, 7) . '...' : 'none'
+    ]);
+    exit();
+}
+
 // Parse JSON input
 $input = json_decode(file_get_contents('php://input'), true);
 $businessName = $input['businessName'] ?? '';
