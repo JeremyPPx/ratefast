@@ -79,7 +79,7 @@ export default function ReviewGenerator() {
     setErrorMessage('');
     
     try {
-      const response = await fetch('/api/generate', {
+      const response = await fetch('/api/generate.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

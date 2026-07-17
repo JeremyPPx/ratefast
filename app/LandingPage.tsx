@@ -39,7 +39,7 @@ export default function LandingPage() {
     setSubmitError('');
 
     try {
-      const response = await fetch('/api/apply', {
+      const response = await fetch('/api/apply.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
