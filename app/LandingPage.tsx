@@ -239,7 +239,7 @@ export default function LandingPage() {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    placeholder="z.B. Jeremy Pape"
+                    placeholder="z.B. Max Mustermann"
                     className="w-full p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   />
                 </div>
@@ -251,7 +251,7 @@ export default function LandingPage() {
                     required
                     value={formData.company}
                     onChange={handleInputChange}
-                    placeholder="z.B. PizzAmore"
+                    placeholder="z.B. MusterPizzeria"
                     className="w-full p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   />
                 </div>
@@ -266,7 +266,7 @@ export default function LandingPage() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="z.B. info@tekkersclub.de"
+                    placeholder="z.B. max@musterpizzeria.de"
                     className="w-full p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   />
                 </div>
@@ -278,7 +278,7 @@ export default function LandingPage() {
                     required
                     value={formData.city}
                     onChange={handleInputChange}
-                    placeholder="z.B. Bremerhaven"
+                    placeholder="z.B. Musterstadt"
                     className="w-full p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   />
                 </div>
@@ -291,7 +291,7 @@ export default function LandingPage() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="z.B. 015901923275"
+                  placeholder="z.B. 0123456789"
                   className="w-full p-3.5 bg-slate-950 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                 />
               </div>
